@@ -3,11 +3,11 @@
 print("Melanie Dental Clinic")
 print("* ----------------------------*")
 #take the patient's name from user
-patient_name = input("Receipt for patient name: ??? \n")
+patient_name = input("Receipt for patient name:  ")
 print("----------------------------------------------")
 #take cleaning performed, cavity-filling performed and X-Ray performed from user
 a = input("Was cleaning performed?(y/n)")
-b = input("Was cavity-filling performed?(y/n)")
+b = input("Was cavity-filling performed?(y/n)") 
 c = input("Was X-Ray performed?(y/n)")
 #calculate function
 def calculate(a, b, c):
@@ -26,18 +26,20 @@ def calculate(a, b, c):
   d = int(a) + int(b) + int(c)
   return d
 subtotal = calculate(a, b, c)
+print("Subtotal: $" + str(subtotal))
 #decision-making statement
 #If it is more than $300, give a 10% discount.
 if(subtotal>300):
   subtotal= (((int(calculate(a, b, c))) *(int(10)))/(int(100)))
+  print("Tax: 10%")
 #If the bill of a patient is more than $200, give the user 5% discount
 elif (subtotal>200) and (subtotal<300):
   subtotal= (((int(calculate(a, b, c))) *(int(5)))/(int(100)))
+  print("Tax: 5%")
 else:
 #Otherwise keep the same total.
   subtotal=(((int(calculate(a, b, c))) *(int(15)))/(int(100)))
-print("Subtotal: $" + str(subtotal))
-print("Tax: 15%")
+  print("Tax: 15%")
 print("------------------------------------------------")
 #show the result
 print("Total: $" + str(subtotal))

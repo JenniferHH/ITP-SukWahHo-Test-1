@@ -12,18 +12,14 @@ def displayResult():
     a, b, c = takeInput()
     if c == "+":
         d = a + b
-#show formula
-        print(f"{a} + {b} = {d}")
+        print(a,"+",b,"=",d)
     elif c == "-":
         d = a - b
-#show formula
-        print(f"{a} - {b} = {d}")
+        print(a,"-",b,"=",d)
     elif c == "*":
         d = a * b
-#show formula
-        print(f"{a} * {b} = {d}")
+        print(a,"*",b,"=",d)
     else:
         d = a / b
-#show formula
-        print(f"{a} / {b} = {d}")
+        print(a,"/",b,"=",d)
 displayResult()
