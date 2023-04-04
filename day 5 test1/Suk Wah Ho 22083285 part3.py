@@ -17,7 +17,19 @@ def convertSalary():
      print("You will be rich in Canada with a salary of " + convertSalary() + "CAD")
   else:
     print("You will be poor in Canada with a salary of " + convertSalary() + "CAD")
-    
+  if country=="USA" and convertSalary()>=56516:
+     print("You will be rich in USA with a salary of " + convertSalary() + " US Dollars")
+  else:
+    print("You will be poor in USA with a salary of " + convertSalary() + " US Dollars")
+if country=="Cambodia" and convertSalary()>=	
+5649856:
+     print("You will be rich in Cambodia with a salary of " + convertSalary() + " Cambodian Riel")
+  else:
+    print("You will be poor in Cambodia with a salary of " + convertSalary() + " Cambodian Riel")
+    if country=="United Kingdom" and convertSalary()>=35423:
+     print("You will be rich in United Kingdom with a salary of " + convertSalary() + " Pound Sterling")
+  else:
+    print("You will be poor in United Kingdom with a salary of " + convertSalary() + " Pound Sterling")
     
 
     
