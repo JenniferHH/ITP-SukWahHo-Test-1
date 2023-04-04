@@ -12,8 +12,12 @@ def convertSalary():
     finalsalary=int(salary*	
 0.91)
   convertSalary()
-  if finalsalary>=64000:
-     print("You will be rich in Canada with a salary of " + finalsalary + "CAD")
+  
+  if country=="Canada" and convertSalary()>=64000:
+     print("You will be rich in Canada with a salary of " + convertSalary() + "CAD")
+  else:
+    print("You will be poor in Canada with a salary of " + convertSalary() + "CAD")
+    
     
 
     
