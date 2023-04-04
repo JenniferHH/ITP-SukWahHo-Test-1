@@ -1,33 +1,40 @@
-#Q3
-#take number of pennies, nickels, dimes and quarters from user 
-a=int(input("Enter the number of pennies: "))
-b=int(input("Enter number of nickels: "))
-c=int(input("Enter number of dimes: "))
-d=int(input("Enter number of quarters: "))
-#calculate totalCent
-totalCent=(a*1+b*5+c*10+d*25)
-#calculate totalDollars
-totalDollars=(totalCent/100)
-# If the totalDollars value is greater than 1.0
-if (totalDollars>1.0):
-  print("Sorry, the amount you entered was more than one dollar.")
-#If the totalDollars value is less than 1.0
-elif (totalDollars<1.0):
-  print("Sorry, the amount you entered was less than one dollar.")
-# If the totalDollars value is 1.0
-else:
-  print ("Congratulations!")
-  print ("The amount you entered was exactly one dollar!")
-  print ("You win the game!!")
+#part3
+salary=float(input("Please enter your salary in Germany: "))
+country=input("Enter the country you want to migrate: ")
+def convertSalary(country, salary):
+  if country=="Canada":
+    final=salary*56
+    if final >64000:
+      print("You will be rich in Canada with a salary of " + final + "CAD")
+    else:
+      print("You will be poor in Canada with a salary of " + final + "CAD")
+  elif country=="USA":
+    final==salary*1.18
+    if final >56516:
+       print("You will be rich in USA with a salary of " + final + " US Dollars")
+    else:
+      print("You will be poor in USA with a salary of " + final + " US Dollars")
+  elif country=="Cambodia":
+    final=salary*4847.38
+    if final > 5649856:
+       print("You will be rich in Cambodia with a salary of " + final + " Cambodian Riel")
+    else:
+      print("You will be poor in Cambodia with a salary of " + final + " Cambodian Riel")
+  elif country=="United Kingdom":
+    final=salary*0.91
+    if final>35423:
+      print("You will be rich in United Kingdom with a salary of " + final + " Pound Sterling") 
+    else:
+      print("You will be poor in United Kingdom with a salary of " + final + " Pound Sterling")
+  else:
+    print("Error") 
+
+convertSalary(country, salary)
 
     
 
-
-
-
-
- 
-
+    
+    
+    
+    
   
-
-

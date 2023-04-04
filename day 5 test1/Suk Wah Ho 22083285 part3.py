@@ -1,35 +1,36 @@
 #part3
-salary=int(input("Please enter your salary in Germany: "))
+salary=float(input("Please enter your salary in Germany: "))
 country=input("Enter the country you want to migrate: ")
-def convertSalary():
+def convertSalary(country, salary):
   if country=="Canada":
-    finalsalary=int(salary*56)
+    final=salary*56
+    if final >64000:
+      print("You will be rich in Canada with a salary of " + final + "CAD")
+    else:
+      print("You will be poor in Canada with a salary of " + final + "CAD")
   elif country=="USA":
-    finalsalary=int(salary*1.18)
+    final==salary*1.18
+    if final >56516:
+       print("You will be rich in USA with a salary of " + final + " US Dollars")
+    else:
+      print("You will be poor in USA with a salary of " + final + " US Dollars")
   elif country=="Cambodia":
-    finalsalary=int(salary*4,847.38)
+    final=salary*4847.38
+    if final > 5649856:
+       print("You will be rich in Cambodia with a salary of " + final + " Cambodian Riel")
+    else:
+      print("You will be poor in Cambodia with a salary of " + final + " Cambodian Riel")
+  elif country=="United Kingdom":
+    final=salary*0.91
+    if final>35423:
+      print("You will be rich in United Kingdom with a salary of " + final + " Pound Sterling") 
+    else:
+      print("You will be poor in United Kingdom with a salary of " + final + " Pound Sterling")
   else:
-    finalsalary=int(salary*	
-0.91)
-  convertSalary()
-  
-  if country=="Canada" and convertSalary()>=64000:
-     print("You will be rich in Canada with a salary of " + convertSalary() + "CAD")
-  else:
-    print("You will be poor in Canada with a salary of " + convertSalary() + "CAD")
-  if country=="USA" and convertSalary()>=56516:
-     print("You will be rich in USA with a salary of " + convertSalary() + " US Dollars")
-  else:
-    print("You will be poor in USA with a salary of " + convertSalary() + " US Dollars")
-if country=="Cambodia" and convertSalary()>=	
-5649856:
-     print("You will be rich in Cambodia with a salary of " + convertSalary() + " Cambodian Riel")
-  else:
-    print("You will be poor in Cambodia with a salary of " + convertSalary() + " Cambodian Riel")
-    if country=="United Kingdom" and convertSalary()>=35423:
-     print("You will be rich in United Kingdom with a salary of " + convertSalary() + " Pound Sterling")
-  else:
-    print("You will be poor in United Kingdom with a salary of " + convertSalary() + " Pound Sterling")
+    print("Error") 
+
+convertSalary(country, salary)
+
     
 
     
