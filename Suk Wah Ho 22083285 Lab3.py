@@ -21,10 +21,12 @@ while option!=4:
       v=v+1
    elif option==2:
       productname=input("Enter the item to be searched: ")
+      h=True
       for i in shoppingCart.keys():
        if (i==productname):
         print(i+":"+shoppingCart[i])
-       else:
+        h=False
+       if h:
         print("No product exists with this name")
    elif option==3:
     if productname in shoppingCart:
