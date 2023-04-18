@@ -2,7 +2,7 @@ shoppingCart={}
 limit=5
 option=0
 print("WELCOME TO THE AMANDO SHOPPING SITE")
-print("1.Add product to the cart.")
+print("1. Add product to the cart.")
 print("2. Search the product.")
 print("3. Delete the product from the cart.")
 print("4. Quit.")
