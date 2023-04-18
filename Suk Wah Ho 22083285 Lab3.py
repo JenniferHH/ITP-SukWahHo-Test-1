@@ -1,0 +1,22 @@
+shoppingCart={}
+limit=5
+option=0
+print("WELCOME TO THE AMANDO SHOPPING SITE")
+print("1.Add product to the cart.")
+print("2. Search the product.")
+print("3. Delete the product from the cart.")
+print("4. Quit.")
+while option!=4:
+   option=int(input("Enter your choice: "))
+   if option==1:
+    n=int(input("Enter the number of items to be added in the stationary shop: "))
+    v=0
+    while(v<n):
+      if len(shoppingCart)<limit:
+        productname=input("Enter an item: ")
+        brand=input("Enter the brand Name: ")
+        shoppingCart.update({productname:brand})
+      else:
+        print("Cart is full")
+      v=v+1
+    print(shoppingCart)
