@@ -32,6 +32,10 @@ while option!=4:
       print(shoppingCart)
     else:
       print("Cart is empty, no item is found.")
+   elif(option==4):
+    print("Exit.")
+   else:
+    print("Wrong Option Entered.")
     
 
         
