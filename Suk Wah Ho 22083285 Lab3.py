@@ -28,12 +28,11 @@ while option!=4:
         h=False
        if h:
         print("No product exists with this name")
+        h=h<1
    elif option==3:
     if productname in shoppingCart:
       shoppingCart.pop(productname)
-      print(shoppingCart)
-    else:
-      print("Cart is empty, no item is found.")
+    print("Cart is empty, no item is found.")
    elif(option==4):
     print("Exit.")
    else:
