@@ -24,8 +24,25 @@ while option!=5:
        if h:
         print("Not Found")
         h=h<1
+         
    elif option==3:
        name=input("Enter name: ")
        phonenumber=input("Enter new 10-digit phone number: ")   
-   phoneDirectory.update({name:phonenumber})
-   print("Record updated")
+       phoneDirectory.update({name:phonenumber})
+       print("Record updated")
+
+   elif option==4:
+     if name in phoneDirectory:
+      phoneDirectory.pop(name)
+      print("Record deleted")
+   elif option==5:
+    print("Quit")
+   else:
+    print("Wrong Option Entered.")
+    
+
+        
+    
+        
+    
+    
