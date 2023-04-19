@@ -3,15 +3,15 @@ option = 0
 print("WELCOME TO THE GRANN'S PHONE DIRECTORY MENU")
 print("1. Add a record")
 print("2. Search a record")
-print("3. U1pdate a record")
+print("3. Update a record")
 print("4. Delete a record")
 print("5. Quit")
 while option != 5:
   option = int(input("Enter your choice: "))
   if option == 1:
     name = str(input("Enter name: "))
-    phonenumber = input("Enter your 10-digit phone number: ")
-    if len(phonenumber) != 10:
+    phonenumber = int(input("Enter your 10-digit phone number: "))
+    if len(str(phonenumber)) != 10:
       print ("Enter again")
     else:
       phoneDirectory.update({name: phonenumber})
@@ -42,12 +42,19 @@ while option != 5:
 
   elif option == 3:
     name = str(input("Enter name: "))
-    phonenumber = input("Enter new 10-digit phone number: ")
-    if len(phonenumber) != 10:
+    phonenumber = int(input("Enter new 10-digit phone number: "))
+    if len(str(phonenumber)) != 10:
       print ("Enter again")
     else:
-      phoneDirectory.update({name: phonenumber})
-      print("Record updated")
+      h = True
+      for i in phoneDirectory.keys():
+        if (i == name):
+         phoneDirectory.update({name:phonenumber})
+         print("Record updated")
+         h = False
+        elif h:
+          print("Not Found")
+          h = h < 1
       print("Menu")
       print("1. Add a record")
       print("2. Search a record")
