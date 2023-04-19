@@ -1,46 +1,69 @@
-shoppingCart={}
-limit=5
-option=0
-print("WELCOME TO THE AMANDO SHOPPING SITE")
-print("1. Add product to the cart.")
-print("2. Search the product.")
-print("3. Delete the product from the cart.")
-print("4. Quit.")
-while option!=4:
-   option=int(input("Enter your choice: "))
-   if option==1:
-    n=int(input("Enter the number of items to be added in the stationary shop: "))
-    v=0
-    while(v<n):
-      if len(shoppingCart)<limit:
-        productname=input("Enter an item: ")
-        brand=input("Enter the brand Name: ")
-        shoppingCart.update({productname:brand})
-      else:
-        print("Cart is full")
-      v=v+1
-   elif option==2:
-      productname=input("Enter the item to be searched: ")
-      h=True
-      for i in shoppingCart.keys():
-       if (i==productname):
-        print(i+":"+shoppingCart[i])
-        h=False
-       if h:
-        print("No product exists with this name")
-        h=h<1
-   elif option==3:
-    if productname in shoppingCart:
-      shoppingCart.pop(productname)
-    print("Cart is empty, no item is found.")
-   elif(option==4):
-    print("Exit.")
-   else:
-    print("Wrong Option Entered.")
-    
+phoneDirectory = {}
+option = 0
+print("WELCOME TO THE GRANN'S PHONE DIRECTORY MENU")
+print("1. Add a record")
+print("2. Search a record")
+print("3. U1pdate a record")
+print("4. Delete a record")
+print("5. Quit")
+while option != 5:
+  option = int(input("Enter your choice: "))
+  if option == 1:
+    name = str(input("Enter name: "))
+    phonenumber = input("Enter your 10-digit phone number: ")
+    phoneDirectory.update({name: phonenumber})
+    print("Record added")
+    print("Menu")
+    print("1. Add a record")
+    print("2. Search a record")
+    print("3. Change a record")
+    print("4. Delete a record")
+    print("5. Quit")
 
-        
-    
-        
-    
-    
+  elif option == 2:
+    name = str(input("Enter name to search: "))
+    h = True
+    for i in phoneDirectory.keys():
+      if (i == name):
+        print(i + ":" + phoneDirectory[i])
+        h = False
+      if h:
+        print("Not Found")
+        h = h < 1
+    print("Menu")
+    print("1. Add a record")
+    print("2. Search a record")
+    print("3. Change a record")
+    print("4. Delete a record")
+    print("5. Quit")
+
+  elif option == 3:
+    name = str(input("Enter name: "))
+    phonenumber = input("Enter new 10-digit phone number: ")
+    phoneDirectory.update({name: phonenumber})
+    print("Record updated")
+    print("Menu")
+    print("1. Add a record")
+    print("2. Search a record")
+    print("3. Change a record")
+    print("4. Delete a record")
+    print("5. Quit")
+
+  elif option == 4:
+    name=str(input("Enter name: "))
+    if name in phoneDirectory:
+       phoneDirectory.pop(name)
+       print("Record deleted")
+    else:
+       print("Not found")
+    print("Menu")
+    print("1. Add a record")
+    print("2. Search a record")
+    print("3. Change a record")
+    print("4. Delete a record")
+    print("5. Quit")
+
+  elif option == 5:
+    print("Quit")
+  else:
+    print("Wrong Option Entered.")
