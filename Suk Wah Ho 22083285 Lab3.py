@@ -11,14 +11,17 @@ while option != 5:
   if option == 1:
     name = str(input("Enter name: "))
     phonenumber = input("Enter your 10-digit phone number: ")
-    phoneDirectory.update({name: phonenumber})
-    print("Record added")
-    print("Menu")
-    print("1. Add a record")
-    print("2. Search a record")
-    print("3. Change a record")
-    print("4. Delete a record")
-    print("5. Quit")
+    if len(phonenumber) != 10:
+      print ("Enter again")
+    else:
+      phoneDirectory.update({name: phonenumber})
+      print("Record added")
+      print("Menu")
+      print("1. Add a record")
+      print("2. Search a record")
+      print("3. Change a record")
+      print("4. Delete a record")
+      print("5. Quit")
 
   elif option == 2:
     name = str(input("Enter name to search: "))
@@ -40,14 +43,17 @@ while option != 5:
   elif option == 3:
     name = str(input("Enter name: "))
     phonenumber = input("Enter new 10-digit phone number: ")
-    phoneDirectory.update({name: phonenumber})
-    print("Record updated")
-    print("Menu")
-    print("1. Add a record")
-    print("2. Search a record")
-    print("3. Change a record")
-    print("4. Delete a record")
-    print("5. Quit")
+    if len(phonenumber) != 10:
+      print ("Enter again")
+    else:
+      phoneDirectory.update({name: phonenumber})
+      print("Record updated")
+      print("Menu")
+      print("1. Add a record")
+      print("2. Search a record")
+      print("3. Change a record")
+      print("4. Delete a record")
+      print("5. Quit")
 
   elif option == 4:
     name=str(input("Enter name: "))
@@ -56,6 +62,7 @@ while option != 5:
        print("Record deleted")
     else:
        print("Not found")
+    print(phoneDirectory)
     print("Menu")
     print("1. Add a record")
     print("2. Search a record")
