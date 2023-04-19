@@ -3,7 +3,7 @@ option = 0
 print("WELCOME TO THE GRANN'S PHONE DIRECTORY MENU")
 print("1. Add a record")
 print("2. Search a record")
-print("3. Update a record")
+print("3. U1pdate a record")
 print("4. Delete a record")
 print("5. Quit")
 while option != 5:
@@ -21,7 +21,7 @@ while option != 5:
     print("5. Quit")
 
   elif option == 2:
-    productname = input("Enter name to search: ")
+    name = input("Enter name to search: ")
     h = True
     for i in phoneDirectory.keys():
       if (i == name):
