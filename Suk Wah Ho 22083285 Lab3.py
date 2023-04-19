@@ -9,75 +9,88 @@ print("5. Quit")
 while option != 5:
   option = int(input("Enter your choice: "))
   if option == 1:
-    name = str(input("Enter name: "))
-    phonenumber = int(input("Enter your 10-digit phone number: "))
-    if len(str(phonenumber)) != 10:
-      print ("Enter again")
+    name = input("Enter name: ")
+    if name.isalpha():
+      phonenumber = int(input("Enter your 10-digit phone number: "))
+      if len(str(phonenumber)) != 10:
+         print ("Enter again")
+      else:
+         phoneDirectory.update({name: phonenumber})
+         print("Record added")
+         print("Menu")
+         print("1. Add a record")
+         print("2. Search a record")
+         print("3. Change a record")
+         print("4. Delete a record")
+         print("5. Quit")
     else:
-      phoneDirectory.update({name: phonenumber})
-      print("Record added")
-      print("Menu")
-      print("1. Add a record")
-      print("2. Search a record")
-      print("3. Change a record")
-      print("4. Delete a record")
-      print("5. Quit")
-
+      print("Enter again")
+    
   elif option == 2:
     name = str(input("Enter name to search: "))
-    h = True
-    for i in phoneDirectory.keys():
+    if name.isalpha():
+     h = True
+     for i in phoneDirectory.keys():
       if (i == name):
         print(i + ":" + phoneDirectory[i])
         h = False
       if h:
         print("Not Found")
         h = h < 1
-    print("Menu")
-    print("1. Add a record")
-    print("2. Search a record")
-    print("3. Change a record")
-    print("4. Delete a record")
-    print("5. Quit")
+     print("Menu")
+     print("1. Add a record")
+     print("2. Search a record")
+     print("3. Change a record")
+     print("4. Delete a record")
+     print("5. Quit")
+    else:
+      print("Enter again")
+    
 
   elif option == 3:
     name = str(input("Enter name: "))
-    phonenumber = int(input("Enter new 10-digit phone number: "))
-    if len(str(phonenumber)) != 10:
-      print ("Enter again")
-    else:
-      h = True
-      for i in phoneDirectory.keys():
-        if (i == name):
-         phoneDirectory.update({name:phonenumber})
-         print("Record updated")
-         h = False
-        elif h:
+    if name.isalpha():
+     phonenumber = int(input("Enter new 10-digit phone number: "))
+     if len(str(phonenumber)) != 10:
+       print ("Enter again")
+     else:
+       h = True
+       for i in phoneDirectory.keys():
+         if (i == name):
+          phoneDirectory.update({name:phonenumber})
+          print("Record updated")
+          h = False
+         elif h:
           print("Not Found")
           h = h < 1
-      print("Menu")
-      print("1. Add a record")
-      print("2. Search a record")
-      print("3. Change a record")
-      print("4. Delete a record")
-      print("5. Quit")
-
+       print("Menu")
+       print("1. Add a record")
+       print("2. Search a record")
+       print("3. Change a record")
+       print("4. Delete a record")
+       print("5. Quit")
+    else:
+      print("Enter again")
+      
   elif option == 4:
     name=str(input("Enter name: "))
-    if name in phoneDirectory:
-       phoneDirectory.pop(name)
-       print("Record deleted")
+    if name.isalpha():
+     if name in phoneDirectory:
+        phoneDirectory.pop(name)
+        print("Record deleted")
+     else:
+        print("Not found")
+     print(phoneDirectory)
+     print("Menu")
+     print("1. Add a record")
+     print("2. Search a record")
+     print("3. Change a record")
+     print("4. Delete a record")
+     print("5. Quit")
     else:
-       print("Not found")
-    print(phoneDirectory)
-    print("Menu")
-    print("1. Add a record")
-    print("2. Search a record")
-    print("3. Change a record")
-    print("4. Delete a record")
-    print("5. Quit")
-
+      print("Enter again")
+  
   elif option == 5:
     print("Quit")
   else:
-    print("Wrong Option Entered.")
+    print("Wrong Option Entered")
