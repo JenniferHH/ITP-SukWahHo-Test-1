@@ -11,5 +11,16 @@ while option!=5:
    if option==1:
     name=input("Enter name: ")
     phonenumber=input("Enter your 10-digit phone number: ")
-   phoneDirectory.update({name:phonenumber})
-   print("Record added")
+    phoneDirectory.update({name:phonenumber})
+    print("Record added")
+     
+   elif option==2:
+    productname=input("Enter name to search: ")
+    h=True
+    for i in phoneDirectory.keys():
+       if (i==name):
+        print(i+":"+phoneDirectory[i])
+        h=False
+       if h:
+        print("Not Found")
+        h=h<1
